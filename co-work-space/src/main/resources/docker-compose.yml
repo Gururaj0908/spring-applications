@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  db:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: Guru@12345
+      MYSQL_DATABASE: co-workers
+      MYSQL_USER: root
+      MYSQL_PASSWORD: Guru@12345
+    volumes:
+      - db_data:/var/lib/mysql
+volumes:
+  db_data:
